@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateReadme = require('./src/readme-template.js')
+const util = require("util");
+const generateReadme = require('./utils/readme-template.js')
+const writeFileAsync = util.promisify(fs.writeFile);
 
 //Prompt the user questions to populate the README.md
 function promptUser(){
@@ -59,14 +61,18 @@ function promptUser(){
     ]);
 } 
 
-promptUser()
-	.then((answers) => {
-		console.log(answers);
-
-        const pageREADME = generateReadme(answers);
-        
-		fs.writeFile('./README.md', pageREADME, err => {
-		  if (err) throw new Error(err);
-		  console.log('Page created! Check out README.md in this directory to see it!');
-		});
-	});
+// Async function using util.promisify 
+async function init() {
+    try {
+        // Ask user questions and generate responses
+        const answers = await promptUser();
+        const generateContent = generateReadme(answers);
+        // Write new README.md to dist directory
+        await writeFileAsync('./dist/README.md', generateContent);
+        console.log('Successfully wrote to README.md');
+    }   catch(err) {
+        console.log(err);
+    }
+  }
+  
+  init(); 
