@@ -3,7 +3,8 @@
   
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nulla, quos ex quibusdam perspiciatis commodi, id autem, assumenda corporis vero maxime deleniti minima cumque laudantium! Quidem dignissimos, nulla debitis dolores enim reiciendis iusto ex nam ratione aliquid et. Repellendus sit impedit officiis quo eum, laborum veritatis obcaecati! Ratione, ut iusto.
+README Generator is a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
+A walkthrough video of the application can be found here: https://watch.screencastify.com/v/BagDQoHwziSODPNhrWro
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -15,13 +16,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nulla, quos ex
 ## Installation
 This project requires node.js. Once in the command-line, run npm init and then npm install inquirer.
 ## Usage
-Run node app.js at th root of your project and answer the prompted questions.
+Run node app.js at the root of your project and answer the prompted questions.
 ## License
 This application is covered by the MIT license. 
 ## Contributing
 Contributor Covenant Code of Conduct
 ## Tests
-No Tests
+No tests included
 ## Questions
 Email me with any questions: code@code.com<br /><br />
 Find me on GitHub: (https://github.com/camyacodes)<br />
